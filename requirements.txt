@@ -1,2 +1,5 @@
-Flask==1.0.2
-line-bot-sdk==1.8.0
+Flask==0.12.2
+
+
+line-bot-sdk
+numpy
