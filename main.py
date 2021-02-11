@@ -14,6 +14,7 @@ import time
 import numpy as np
 
 app = Flask(__name__)
+app.debug = False
 
 #環境変数設定
 ACCESS_TOKEN = os.environ["YOUR_CHANNEL_ACCESS_TOKEN"]
@@ -85,10 +86,9 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text=falseWords[np.random.randint(4)]))
 
 
+#if __name__ == "__main__":
+#    port = int(os.environ.get('PORT', 8000))
+#    app.run(host ='0.0.0.0',port = port)
 if __name__ == "__main__":
-    port = int(os.environ.get('PORT', 8000))
-    app.run(host ='0.0.0.0',port = port)
-	
-@app.route('/')
-def index():
-    return 'Hello world'
+    port = int(os.getenv("PORT"))
+    app.run(host="0.0.0.0", port=port)
