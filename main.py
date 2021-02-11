@@ -63,7 +63,7 @@ bathBoil = ["お風呂沸かしときます！","追い焚きします！"]
 bathInWords = ["お風呂入れて","おふろいれて","ohuroirete","おふろ入れて","お風呂いれて","お風呂入れといて","お風呂いれといて"]
 bathBoilWords = ["おいだき","追いだき","追い焚き","oidaki","おい焚き"]
 
-falseWords["よくわからん","どういうこと？","うん？","はい？","なんて？"]
+falseWords = ["よくわからん","どういうこと？","うん？","はい？","なんて？"]
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
