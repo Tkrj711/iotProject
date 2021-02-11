@@ -31,6 +31,7 @@ def callback():
 	
 	#リクエストボディ
     body = request.get_data(as_text=True)
+    print(body)
     app.logger.info("Request body: " + body)
  
     try: 
