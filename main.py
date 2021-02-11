@@ -16,8 +16,8 @@ import numpy as np
 app = Flask(__name__)
 
 #環境変数設定
-ACCESS_TOKEN = os.environ["F4JWCxGckDxRKGec2y6Vh2MjNaDqWR4FW30TYGcgD3TCjzyUSKJM8hJ16SNDwBE0tkzZbjQyrfVSgJzzOYtADsZL/zwAjTKEjbZKC776ldIS6mitS6dHpkweVmNFXLIDh4oI4rGdqPbsNxBj8Q5ulAdB04t89/1O/w1cDnyilFU="]
-SECRET = os.environ["881784f423ca088b1066d27c96f79f8c"]
+ACCESS_TOKEN = os.environ["YOUR_CHANNEL_ACCESS_TOKEN"]
+SECRET = os.environ["YOUR_CHANNEL_ACCESS_TOKEN"]
 
 line_bot_api = LineBotApi(ACCESS_TOKEN) 
 handler = WebhookHandler(SECRET)
