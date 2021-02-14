@@ -55,7 +55,7 @@ def handle_get_request():
     a = 0
     print("accept_"+str(b))
     #lineID
-    line_bot_api.push_message("881784f423ca088b1066d27c96f79f8c",TextSendMessage(text="accept_"+str(b)))
+    line_bot_api.push_message("Ufc2f9581f7270b02bdf52f7ae30c337f",TextSendMessage(text="accept_"+str(b)))
     
     return "%%%"+str(b)+"%%%"
 
