@@ -27,10 +27,10 @@ handler = WebhookHandler(SECRET)
 @app.route("/callback", methods=['POST'])
 def callback():
 	
-	#ヘッダー
+    #ヘッダー
     signature = request.headers['X-Line-Signature']
 	
-	#リクエストボディ
+    #リクエストボディ
     body = request.get_data(as_text=True)
     print(body)
     app.logger.info("Request body: " + body)
@@ -54,8 +54,8 @@ def handle_get_request():
     b = a
     a = 0
     print("accept_"+str(b))
-    #lineID
-   # line_bot_api.push_message("Ufc2f9581f7270b02bdf52f7ae30c337f",TextSendMessage(text="accept_"+str(b)))
+    #GETリクエスト時のパラメータをbot経由で通知
+    # line_bot_api.push_message("Ufc2f9581f7270b02bdf52f7ae30c337f",TextSendMessage(text="accept_"+str(b)))
     
     return "%%%"+str(b)+"%%%"
 
@@ -86,9 +86,6 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text=falseWords[np.random.randint(4)]))
 
 
-#if __name__ == "__main__":
-#    port = int(os.environ.get('PORT', 8000))
-#    app.run(host ='0.0.0.0',port = port)
 if __name__ == "__main__":
     port = int(os.getenv("PORT"))
     app.run(host="0.0.0.0", port=port)
