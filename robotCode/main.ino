@@ -125,8 +125,3 @@ void loop()
   }
   delay(25000);
 }
-
-// 
-void ReturnPosition() {
-}
-  
